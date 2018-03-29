@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MultiSelectDropdownModule } from './multi-select-dropdown.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MultiSelectDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

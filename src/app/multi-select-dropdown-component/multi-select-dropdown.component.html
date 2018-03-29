@@ -1,0 +1,20 @@
+<div [ngClass]="config.containerClasses" class="multi-select-dropdown-container">
+  <label (click)="toggle()">{{label}}</label>
+  <button [ngClass]="config.buttonClasses" (click)="toggle()">
+    <div [ngClass]="config.buttonWrapperClasses">
+      <span [ngStyle]="config.buttonTextStyles" *ngIf="!!buttonText">{{buttonText}}</span>
+      <span [ngStyle]="config.buttonTextStyles" *ngIf="!buttonText">&nbsp;</span>
+      <i [ngClass]="config.buttonIconClasses"></i>
+    </div>
+  </button>
+  <div *ngIf="isOpen" [ngClass]="config.listClasses" class="option-list">
+    <div *ngIf="config.addSelectAllOption" [ngClass]="config.optionClasses" (click)="selectAll()">
+      <i [ngClass]="(selectAllOption.isSelected) ? config.checkedClasses : config.uncheckedClasses"></i>
+      {{selectAllOption.display}}
+    </div>
+    <div [ngClass]="config.optionClasses" *ngFor="let option of options" (click)="select(option.id)">
+      <i [ngClass]="(option.isSelected) ? config.checkedClasses : config.uncheckedClasses"></i>
+      {{option.display}}
+    </div>
+  </div>
+</div>
