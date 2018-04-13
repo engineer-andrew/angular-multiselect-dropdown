@@ -1,27 +1,24 @@
 # MultiSelectDropdown
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+A fully configurable, customizable, Angular 5+ multi-select dropdown
 
-## Development server
+### Installation
+```
+$ npm install angular-tree-view
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Code
+The code is on [Github](https://github.com/engineer-andrew/Angular-Multi-Select-Dropdown).
 
-## Code scaffolding
+### Demo
+Check out all of the demos on [Github Pages](https://engineer-andrew.github.io/Angular-Multi-Select-Dropdown/) (coming soon).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Quick Notes
+The intention of this component is to provide a fully customizable, fully contained way to have a multi-select dropdown included in your Angular application. I wrote it to meet my needs so there's probably a lot of stuff it doesn't do, or doesn't do well. Feel free to open an issue or fork it and make changes.
 
-## Build
+### Usage
+The most straightforward usage is to include the module with `.forRoot()` specified to enable your module to use the included service. In order to be fully customizable, there are a ton of options you can specify. I hope to update them here over time, but for now you can check them out by viewing the source (it's in /src/app/multi-select-dropdown-component/multi-select-dropdown-component.ts) and try to figure out which is which.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+You'll see in the source that you can specify a config object instead of providing the individual property values. Again, I hope to document that in the future.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+I suppose that's it for now. This is a component I use often so hopefully I can find the time to come back here and update the documentation with some frequency.
